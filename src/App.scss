@@ -1,0 +1,31 @@
+@import "colors";
+@import "Fontssx";
+
+.main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .quote__text {
+    font-size: $font-size-quote;
+  }
+
+  .quote_author {
+    font-size: $font-size-author;
+  }
+}
+
+.button {
+  color: $font-color-button;
+}
+
+.button__generate {
+  background-color: $button-generate-background;
+  display: inline-block;
+}
+
+.button__share {
+  background-color: $button-share-background;
+
+  border: 0px;
+}

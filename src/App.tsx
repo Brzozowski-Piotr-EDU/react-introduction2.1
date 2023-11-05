@@ -2,11 +2,15 @@
 //import logo from "./logo.svg";
 import { useState } from "react";
 import "./App.scss";
+import { QuoteProps, QuoteJSX } from "./components/Quote";
+import { ButtonJSX, ButtonProps } from "./components/button";
 
-interface Quote {
+export interface Quote {
   text: string;
   author: string;
 }
+
+let generatedQuote = "";
 
 const quotes: Quote[] = [
   {
@@ -40,14 +44,32 @@ function App() {
 
   const handleGenerateQuoteClick = () => {
     const randomIndex = Math.floor(Math.random() * quotes.length);
-    return setCurrentQuote(quotes[randomIndex]);
+    const generatedQuote = quotes[randomIndex];
+    setCurrentQuote(generatedQuote);
+    return generatedQuote;
   };
 
   const handleShareQuoteClick = () => {
-    console.log("Drawn quote is:", handleGenerateQuoteClick);
+    console.log("Generated quote:", currentQuote);
   };
 
-  return <main className="main">// tu jest miejsce na nowy kod JSX</main>;
+  return (
+    <main className="main ">
+      <QuoteJSX quote={currentQuote} />
+      <ButtonJSX
+        className="button button__generate"
+        onClick={handleGenerateQuoteClick}
+      >
+        Generate quote
+      </ButtonJSX>
+      <ButtonJSX
+        className="button button__share"
+        onClick={handleShareQuoteClick}
+      >
+        Share quote
+      </ButtonJSX>
+    </main>
+  );
 }
 
 export default App;

@@ -1,11 +1,18 @@
 import { ReactNode } from "react";
 
-interface ButtonProps {
+export interface ButtonProps {
   className: string;
   children: ReactNode;
   onClick: () => void;
 }
-
+export const ButtonJSX = ({ className, children, onClick }: ButtonProps) => {
+  return (
+    <button className={className} onClick={onClick}>
+      {children}
+    </button>
+  );
+};
+/*
 function Button({ className, children, onClick }: ButtonProps) {
   return (
     <button className={className} onClick={onClick}>
@@ -13,3 +20,4 @@ function Button({ className, children, onClick }: ButtonProps) {
     </button>
   );
 }
+*/
