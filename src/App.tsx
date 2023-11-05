@@ -33,19 +33,14 @@ const quotes: Quote[] = [
     text: "Kindness is universal. Sometimes being kind allows others to see the goodness in humanity through you. Always be kinder than necessary.",
     author: "Germany Kent",
   },
-  // Dodaj pozostałe cytaty w podobny sposób
 ];
-
-const handleGenerateQuoteClick: number = Math.round(
-  Math.random() * quotes.length
-);
 
 function App() {
   const [currentQuote, setCurrentQuote] = useState<Quote>(quotes[0]);
 
   const handleGenerateQuoteClick = () => {
     const randomIndex = Math.floor(Math.random() * quotes.length);
-    setCurrentQuote(quotes[randomIndex]);
+    return setCurrentQuote(quotes[randomIndex]);
   };
 
   const handleShareQuoteClick = () => {
