@@ -4,9 +4,9 @@ export interface QuoteProps {
   quote: QuoteModel;
 }
 
-export const QuoteJSX = ({ quote }: QuoteProps) => {
+export const QuoteComponent = ({ quote }: QuoteProps) => {
   return (
-    <div className="quote__container">
+    <div>
       <p className="quote__text">"{quote.text}"</p>
       <p className="quote__author">- {quote.author}</p>
     </div>

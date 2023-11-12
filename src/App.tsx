@@ -2,15 +2,13 @@
 //import logo from "./logo.svg";
 import { useState } from "react";
 import "./App.scss";
-import { QuoteProps, QuoteJSX } from "./components/Quote";
+import { QuoteProps, QuoteComponent } from "./components/Quote";
 import { Button, ButtonProps } from "./components/Button";
 
 export interface Quote {
   text: string;
   author: string;
 }
-
-let generatedQuote = "";
 
 const quotes: Quote[] = [
   {
@@ -53,7 +51,7 @@ function App() {
 
   return (
     <main className="main ">
-      <QuoteJSX quote={currentQuote} />
+      <QuoteComponent quote={currentQuote} />
       <div className="wrapper">
         <Button
           className="button button__generate"

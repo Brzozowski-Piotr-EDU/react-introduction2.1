@@ -14,15 +14,6 @@
     font-size: $font-size-author;
   }
 }
-.wrapper {
-  display: flex;
-  flex-direction: row; // Zmiana z column na row
-  justify-content: flex-start;
-
-  .button {
-    margin-right: 10px; // Dodaj odstęp między przyciskami, jeśli chcesz
-  }
-}
 
 .wrapper {
   display: flex;
@@ -32,7 +23,7 @@
 .button {
   color: $font-color-button;
   font-size: $font-size-button;
-  margin-right: 10px; // Dodaj odstęp między przyciskami, jeśli chcesz
+  margin-right: 10px;
 
   &__generate {
     background-color: $button-generate-background;
