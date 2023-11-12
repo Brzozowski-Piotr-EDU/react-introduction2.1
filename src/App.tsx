@@ -3,7 +3,7 @@
 import { useState } from "react";
 import "./App.scss";
 import { QuoteProps, QuoteJSX } from "./components/Quote";
-import { ButtonJSX, ButtonProps } from "./components/button";
+import { Button, ButtonProps } from "./components/Button";
 
 export interface Quote {
   text: string;
@@ -42,11 +42,9 @@ const quotes: Quote[] = [
 function App() {
   const [currentQuote, setCurrentQuote] = useState<Quote>(quotes[0]);
 
-  const handleGenerateQuoteClick = () => {
+  const handleGenerateQuoteClick = (): void => {
     const randomIndex = Math.floor(Math.random() * quotes.length);
-    const generatedQuote = quotes[randomIndex];
-    setCurrentQuote(generatedQuote);
-    return generatedQuote;
+    setCurrentQuote(quotes[randomIndex]);
   };
 
   const handleShareQuoteClick = () => {
@@ -56,18 +54,20 @@ function App() {
   return (
     <main className="main ">
       <QuoteJSX quote={currentQuote} />
-      <ButtonJSX
-        className="button button__generate"
-        onClick={handleGenerateQuoteClick}
-      >
-        Generate quote
-      </ButtonJSX>
-      <ButtonJSX
-        className="button button__share"
-        onClick={handleShareQuoteClick}
-      >
-        Share quote
-      </ButtonJSX>
+      <div className="wrapper">
+        <Button
+          className="button button__generate"
+          onClick={handleGenerateQuoteClick}
+        >
+          Generate quote
+        </Button>
+        <Button
+          className="button button__share"
+          onClick={handleShareQuoteClick}
+        >
+          Share quote
+        </Button>
+      </div>
     </main>
   );
 }

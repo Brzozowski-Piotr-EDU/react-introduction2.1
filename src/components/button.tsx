@@ -5,19 +5,10 @@ export interface ButtonProps {
   children: ReactNode;
   onClick: () => void;
 }
-export const ButtonJSX = ({ className, children, onClick }: ButtonProps) => {
+export const Button = ({ className, children, onClick }: ButtonProps) => {
   return (
     <button className={className} onClick={onClick}>
       {children}
     </button>
   );
 };
-/*
-function Button({ className, children, onClick }: ButtonProps) {
-  return (
-    <button className={className} onClick={onClick}>
-      {children}
-    </button>
-  );
-}
-*/

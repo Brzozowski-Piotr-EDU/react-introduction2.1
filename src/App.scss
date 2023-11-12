@@ -14,17 +14,36 @@
     font-size: $font-size-author;
   }
 }
+.wrapper {
+  display: flex;
+  flex-direction: row; // Zmiana z column na row
+  justify-content: flex-start;
+
+  .button {
+    margin-right: 10px; // Dodaj odstęp między przyciskami, jeśli chcesz
+  }
+}
+
+.wrapper {
+  display: flex;
+  justify-content: flex-start;
+}
 
 .button {
   color: $font-color-button;
+  font-size: $font-size-button;
+  margin-right: 10px; // Dodaj odstęp między przyciskami, jeśli chcesz
+
+  &__generate {
+    background-color: $button-generate-background;
+    border-radius: 3px;
+  }
+
+  &__share {
+    background-color: $button-share-background;
+    border: 0px;
+  }
 }
-
-.button__generate {
-  background-color: $button-generate-background;
-}
-
-.button__share {
-  background-color: $button-share-background;
-
-  border: 0px;
+.button:hover {
+  cursor: pointer;
 }
