@@ -16,24 +16,24 @@ const quotes: Quote[] = [
     author: "Henry David Thoreau",
   },
   {
-    text: "I would rather be an artist than a leader. Ironically, a leader has to follow the rules.",
-    author: "Criss Jami",
+    text: "Doing what you love is the cornerstone of having abundance in your life.",
+    author: "Wayne W. Dyer",
   },
   {
-    text: "It is not until you change your identity to match your life blueprint that you will understand why everything in the past never worked.",
-    author: "Shannon L. Alder",
+    text: "Life is like riding a bicycle. To keep your balance you must keep moving.",
+    author: "Albert Einstein",
   },
   {
-    text: "To bring up a child in the way he should go, travel that way yourself once in a while.",
-    author: "Josh Billings",
+    text: "Consider that not only do negative thoughts and emotions destroy our experience of peace, they also undermine our health.",
+    author: "Dalai Lama",
   },
   {
     text: "I may do some good before I am dead--be a sort of success as a frightful example of what not to do; and so illustrate a moral story.",
     author: "Thomas Hardy",
   },
   {
-    text: "Kindness is universal. Sometimes being kind allows others to see the goodness in humanity through you. Always be kinder than necessary.",
-    author: "Germany Kent",
+    text: "Most folks are as happy as they make up their minds to be.",
+    author: "Abraham Lincoln",
   },
 ];
 
