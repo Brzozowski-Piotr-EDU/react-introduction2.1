@@ -5,14 +5,41 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  text-align: center;
+}
 
-  .quote__text {
-    font-size: $font-size-quote;
-  }
+.quote-container {
+  display: flex;
+  align-items: center;
+}
 
-  .quote_author {
-    font-size: $font-size-author;
+.imgDiv {
+  margin-right: 10px;
+  max-width: 30%;
+  max-height: 80%;
+  margin-bottom: 10px;
+
+  img {
+    width: 100%;
+    height: auto;
+    filter: grayscale(100%);
   }
+}
+
+.quote {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.quote__text {
+  font-size: $font-size-quote;
+}
+
+.quote__author {
+  font-size: $font-size-author;
+  margin-left: 45.5%;
 }
 
 .wrapper {
@@ -24,6 +51,7 @@
   color: $font-color-button;
   font-size: $font-size-button;
   margin-right: 10px;
+  margin-bottom: 10px;
 
   &__generate {
     background-color: $button-generate-background;
@@ -35,6 +63,7 @@
     border: 0px;
   }
 }
+
 .button:hover {
   cursor: pointer;
 }
