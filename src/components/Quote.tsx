@@ -11,7 +11,7 @@ export const QuoteComponent = ({ quote }: QuoteProps) => {
         <a href={`https://pl.wikipedia.org/wiki/${quote.author}`}>
           <img
             src={require(`../assets/images/authors/${quote.author}.jpg`)}
-            alt="of quote author"
+            alt={`Of ${quote.author}`}
           />
         </a>
         <p>Click image for more informations!</p>
