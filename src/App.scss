@@ -11,17 +11,17 @@
 .quote-container {
   display: flex;
   align-items: center;
+
+  width: 50%;
 }
 
 .imgDiv {
   margin-right: 10px;
-  max-width: 30%;
-  max-height: 80%;
   margin-bottom: 10px;
 
   img {
-    width: 100%;
-    height: auto;
+    height: 469px;
+    width: 400px;
     filter: grayscale(100%);
   }
 }
@@ -30,7 +30,6 @@
   flex: 1;
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
 }
 
 .quote__text {
@@ -39,7 +38,6 @@
 
 .quote__author {
   font-size: $font-size-author;
-  margin-left: 45.5%;
 }
 
 .wrapper {

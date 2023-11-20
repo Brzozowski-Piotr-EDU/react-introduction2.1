@@ -2,8 +2,8 @@
 //import logo from "./logo.svg";
 import { useState } from "react";
 import "./App.scss";
-import { QuoteProps, QuoteComponent } from "./components/Quote";
-import { Button, ButtonProps } from "./components/Button";
+import { QuoteComponent } from "./components/Quote";
+import { Button } from "./components/Button";
 
 export interface Quote {
   text: string;
@@ -50,7 +50,7 @@ function App() {
   };
 
   return (
-    <main className="main ">
+    <main className="main">
       <QuoteComponent quote={currentQuote} />
       <div className="wrapper">
         <Button
